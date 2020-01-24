@@ -5,7 +5,7 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -14,7 +14,8 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        String addToString= baseValue + valueToBeAdded;
+        return addToString;
     }
 
     /**
@@ -22,7 +23,8 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        String reverse = new StringBuffer(valueToBeReversed).reverse().toString();
+        return reverse;
     }
 
     /**
@@ -30,7 +32,10 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        Integer stringLength = word.length() ;
+        Integer middle = stringLength/2 ;
+        Character c = word.charAt(middle);
+        return c;
     }
 
     /**
@@ -39,7 +44,16 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        String space="";
+        char[] length= value.toCharArray();
+        StringBuilder str= new StringBuilder();
+        for(char ch: length){
+            if(ch!=charToRemove){
+            str.append(ch);
+        }
+        }
+        space= str.toString();
+        return space;
     }
 
     /**
@@ -47,6 +61,14 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        int length=sentence.length();
+        String str="";
+        for(int i=length-1; i>0; i--){
+            if(sentence.charAt(i) == ' '){
+            str = sentence.substring(i+1);
+            break;
+        }
+        }
+        return str;
     }
 }
